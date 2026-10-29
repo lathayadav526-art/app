@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#19452f">
+  <meta name="description" content="AgriMithra brings practical farming tools, a farmer marketplace and a growing community together.">
+  <title>AgriMithra | Grow together</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="publicView">
+    <header class="public-header">
+      <a class="brand" href="/" aria-label="AgriMithra home"><span class="brand-mark">🌾</span><span><strong>AgriMithra</strong><small>Grow together</small></span></a>
+      <nav class="public-nav"><a href="#how-it-works">How it helps</a><a href="#sectors">Our services</a><a href="#about">About AgriMithra</a></nav>
+      <div class="public-actions"><select class="language-select" id="publicLanguage" aria-label="Choose language"></select><button class="btn btn-quiet" data-action="login">Sign in</button><button class="btn btn-primary" data-action="signup">Join AgriMithra</button></div>
+    </header>
+    <main>
+      <section class="hero public-container">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> A growing platform for Indian agriculture</span>
+          <h1>Good things grow<br><em>when we grow together.</em></h1>
+          <p>Tools for farm decisions. A marketplace for local produce. A community to share what works. AgriMithra brings the parts of farming support into one place.</p>
+          <div class="hero-actions"><button class="btn btn-primary btn-large" data-action="signup">Create your free account <span>→</span></button><button class="btn btn-text" data-action="login">Already have an account? Sign in</button></div>
+          <div class="hero-proof"><span>🌱</span><div><strong>Built around farmers and local communities</strong><small>Choose a farmer, buyer or agriculture expert account</small></div></div>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-sun"></div><div class="hero-hill hill-back"></div><div class="hero-hill hill-front"></div>
+          <div class="hero-plant plant-one">🌿</div><div class="hero-plant plant-two">🌾</div><div class="hero-plant plant-three">🌱</div>
+          <div class="hero-sticker weather-sticker"><span>☁️</span><div><strong>Farm information</strong><small>Tools and trusted links</small></div></div>
+          <div class="hero-sticker community-sticker"><span>🤝</span><div><strong>Local community</strong><small>Learn from one another</small></div></div>
+        </div>
+      </section>
+      <section class="trust-strip"><div class="public-container trust-inner"><span>FARM TOOLS</span><b></b><span>FARMER MARKETPLACE</span><b></b><span>COMMUNITY</span><b></b><span>LEARNING</span></div></section>
+      <section class="public-section public-container" id="how-it-works">
+        <div class="section-intro"><span class="eyebrow">A little help, right where you need it</span><h2>One companion.<br><em>Many ways to grow.</em></h2><p>Start with the part of farming that matters to you today. Your account brings the tools and people together.</p></div>
+        <div class="service-grid" id="publicServices"></div>
+      </section>
+      <section class="join-banner public-container" id="sectors"><div><span class="eyebrow">For every part of the farm community</span><h2>From a field question<br>to a new customer.</h2><p>Farmers, buyers and agriculture experts can each find a place to participate.</p><button class="btn btn-light btn-large" data-action="signup">Find your place at AgriMithra →</button></div><div class="join-art">🌱<span>🌾</span><i>✳</i></div></section>
+      <section class="public-section story-section public-container" id="about"><div class="story-art"><span>🌾</span><span>🌿</span><div class="story-quote">“A stronger farm community begins with sharing what we know.”</div></div><div class="section-intro"><span class="eyebrow">Our purpose</span><h2>Technology that<br><em>feels close to home.</em></h2><p>AgriMithra is being built as an accessible agriculture platform for India: regional language support, practical knowledge, direct market access and stronger farmer connections.</p><button class="btn btn-outline" data-action="signup">Get started with AgriMithra →</button></div></section>
+    </main>
+    <footer class="public-footer"><div class="public-container"><a class="brand" href="/"><span class="brand-mark">🌾</span><span><strong>AgriMithra</strong><small>Grow together</small></span></a><p>Practical support for a growing farm community.</p><small>© <span id="year"></span> AgriMithra. Government program information links to official sources.</small></div></footer>
+  </div>
+
+  <div class="app-shell hidden" id="appView">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-route="dashboard"><span class="brand-mark">🌾</span><span><strong>AgriMithra</strong><small>Grow together</small></span></a>
+      <div class="side-label">YOUR AGRIMITHRA</div>
+      <nav class="main-nav">
+        <button class="nav-link active" data-route="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-link" data-route="tools"><span class="nav-icon">✳</span>Farm tools</button>
+        <button class="nav-link" data-route="market"><span class="nav-icon">▧</span>Marketplace</button>
+        <button class="nav-link" data-route="community"><span class="nav-icon">◉</span>Community</button>
+        <button class="nav-link" data-route="learn"><span class="nav-icon">▤</span>Learning</button>
+        <button class="nav-link" data-route="schemes"><span class="nav-icon">◎</span>Government schemes</button>
+      </nav>
+      <button class="nav-link user-panel-link" data-route="user"><span class="nav-icon">☺</span>My user panel</button>
+      <div class="sidebar-spacer"></div>
+      <button class="profile-mini" data-action="profile"><span class="avatar" id="userAvatar">A</span><span class="profile-mini-copy"><strong id="userName">AgriMithra member</strong><small id="userRole">Farmer</small></span><span class="more-dots">···</span></button>
+      <button class="nav-link owner-link hidden" id="ownerNav" data-route="owner"><span class="nav-icon">⚙</span>Admin panel</button>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <label class="global-search"><span>⌕</span><input id="globalSearch" type="search" placeholder="Search crops, products or community"><kbd>Ctrl K</kbd></label>
+        <div class="topbar-actions">
+          <label class="language-control" title="Language"><span>文</span><select id="languageSelect" aria-label="Language"></select></label>
+          <button class="icon-button" id="voiceToggle" data-action="voice"><span>◖</span><span class="voice-label">Voice off</span></button>
+          <button class="icon-button notification-button" data-action="notifications" aria-label="Notifications">♧</button>
+          <button class="btn btn-quiet btn-small" data-action="logout">Sign out</button>
+        </div>
+      </header>
+      <div class="page-wrap" id="pageRoot"></div>
+      <footer class="app-footer"><span>AgriMithra · Your agriculture companion</span><span id="connectionLabel">Connected account</span></footer>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="modal-root" id="modalRoot" aria-live="polite"></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

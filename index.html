@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#245640">
+  <meta name="description" content="AgriMithra is a farmer-friendly smart farming companion for tools, learning, community and local markets.">
+  <title>AgriMithra — a companion for every farm</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-route="dashboard" aria-label="AgriMithra home">
+        <span class="brand-mark">🌾</span>
+        <span><strong>AgriMithra</strong><small data-i18n="brandTagline">Grow well, together</small></span>
+      </a>
+      <div class="side-label" data-i18n="workspace">YOUR FARM</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-route="dashboard"><span class="nav-icon">⌂</span><span data-i18n="dashboard">Dashboard</span></button>
+        <button class="nav-link" data-route="tools"><span class="nav-icon">✳</span><span data-i18n="farmingTools">Farming tools</span><span class="nav-count">4</span></button>
+        <button class="nav-link" data-route="market"><span class="nav-icon">▧</span><span data-i18n="marketplace">Marketplace</span></button>
+        <button class="nav-link" data-route="community"><span class="nav-icon">◉</span><span data-i18n="community">Community</span></button>
+        <button class="nav-link" data-route="learn"><span class="nav-icon">▤</span><span data-i18n="learning">Learning</span></button>
+      </nav>
+      <div class="side-label side-label-spaced" data-i18n="yourResources">YOUR RESOURCES</div>
+      <nav class="main-nav" aria-label="Farm resources">
+        <button class="nav-link" data-route="crops"><span class="nav-icon">♧</span><span data-i18n="cropGuide">Crop guide</span></button>
+        <button class="nav-link" data-route="schemes"><span class="nav-icon">◎</span><span data-i18n="schemes">Govt. schemes</span></button>
+        <button class="nav-link" data-route="assistant"><span class="nav-icon">✺</span><span data-i18n="askMithra">Ask Mithra</span><span class="new-dot"></span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="offline-card">
+        <div class="offline-icon">⌁</div>
+        <div><strong data-i18n="offlineReady">Ready for the field</strong><span data-i18n="offlineNote">Your saved tools work offline</span></div>
+        <span class="online-dot" title="App is available offline"></span>
+      </div>
+      <button class="profile-mini" data-action="profile">
+        <span class="avatar" id="sideAvatar">S</span>
+        <span class="profile-mini-copy"><strong id="sideName">Savitri Patil</strong><small id="sideRole">Farmer · Pune</small></span>
+        <span class="more-dots">···</span>
+      </button>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <label class="global-search">
+          <span>⌕</span>
+          <input id="globalSearch" type="search" placeholder="Search crops, tools, markets..." data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="topbar-actions">
+          <label class="language-control" title="Choose your language">
+            <span>文</span>
+            <select id="languageSelect" aria-label="Language">
+              <option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option><option value="ta">தமிழ்</option><option value="kn">ಕನ್ನಡ</option><option value="ml">മലയാളം</option><option value="mr">मराठी</option><option value="bn">বাংলা</option><option value="gu">ગુજરાતી</option><option value="pa">ਪੰਜਾਬੀ</option><option value="or">ଓଡ଼ିଆ</option><option value="as">অসমীয়া</option><option value="ur">اردو</option>
+            </select>
+          </label>
+          <button class="icon-button voice-control" id="voiceToggle" data-action="voice" aria-pressed="false" title="Turn voice guidance on"><span class="voice-symbol">◖</span><span class="voice-label" data-i18n="voiceOff">Voice off</span></button>
+          <button class="icon-button notification-button" data-action="notifications" aria-label="Notifications"><span>♧</span><i></i></button>
+          <button class="top-avatar" data-action="profile" id="topAvatar" aria-label="Your profile">S</button>
+        </div>
+      </header>
+      <div class="page-wrap" id="pageRoot" aria-live="polite"></div>
+      <footer class="app-footer"><span>AgriMithra · <span data-i18n="footerCompanion">A companion for every farm</span></span><span class="demo-label"><i></i><span data-i18n="demoMode">Demonstration data</span></span></footer>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="modal-root" id="modalRoot" aria-live="polite"></div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

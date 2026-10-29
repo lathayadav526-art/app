@@ -1,0 +1,19 @@
+{
+  "name": "AgriMithra — a companion for every farm",
+  "short_name": "AgriMithra",
+  "description": "Smart farming tools, farmer community and local marketplace.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#245640",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
